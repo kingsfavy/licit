@@ -1,0 +1,28 @@
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
