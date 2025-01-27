@@ -127,7 +127,7 @@ font-weight:500;
 font-family:arial;
 }
 
-.btn, .show-button{
+.btn, .show-button, #compare-button{
 width:45%;
 padding:18px;
 font-size:18px;
@@ -296,16 +296,7 @@ height:200px;
             border-radius: 5px;
             font-size: 16px;
         }
-        #compare-button {
-            padding: 10px 20px;
-            margin: 20px auto;
-            display: block;
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+
         #compare-button:hover {
             background-color: #218838;
         }
@@ -320,12 +311,11 @@ height:200px;
             justify-content: center;
         }
         .crypto-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+           /* border: 1px solid #ddd;
+            border-radius: 8px;*/
             padding: 20px;
             width: 300px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
             text-align: center;
             transition: transform 0.3s;
         }
@@ -354,15 +344,7 @@ height:200px;
             margin-top: 10px;
             text-align: left;
         }
-        .show-button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+
         .show-button:hover {
             background-color: #0056b3;
         }
