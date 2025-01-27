@@ -26,6 +26,14 @@ justify-content:flex-start;
 align-content:center;
 }
 
+.ex{
+font-size:35px;
+font-weight:400;
+}
+
+.float{
+text-align:right;
+}
 .body-text{
 text-align:center;
 width:90%;
@@ -45,11 +53,8 @@ height:auto;
 }
 
 .top-section .heading{
-/*color:#4d22b2;*/
-   background: linear-gradient(90deg, #00ffff, #ff00ff); 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-font-size:45px;
+color:#4d22b2;
+font-size:50px;
 font-weight:bolder;
 font-family:arial;
 }
@@ -59,7 +64,7 @@ color:#fff;
 }
 
 .infos{
-width:60%;
+width:90%;
 height:auto;
 }
 
@@ -72,13 +77,37 @@ color:#4D22B2;
 /*background:#000;*/
 }
 
+
+.about-section{
+padding:2rem 0;
+width:100%;
+position:relative;
+height:auto;
+display:flex;
+justify-content:center;
+align-content:center;
+}
+
+
+
 .top-section .bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity:0.6;
+    opacity:0.2;
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+.about-section .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0.2;
     object-fit: cover; 
     z-index: -1; 
 }
@@ -204,8 +233,28 @@ height:1rem;
 
 .col{
 color:#4d22b2;
+font-size:25px;
+font-weight:300;
 }
 
+.imgs{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.imgs-con{
+width:80px;
+height:80px;
+}
+
+
+.success-con{
+widrh:100%;
+height:auto;
+padding:1.5rem 0;
+background:#4d22b2;
+}
 
         .content {
             transform: translateY(50px);
@@ -214,6 +263,116 @@ color:#4d22b2;
         .content.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+
+        h1 {
+            text-align: center;
+        }
+        #search {
+            width: 50%;
+            padding: 10px;
+            margin: 20px auto;
+            display: block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #compare-button {
+            padding: 10px 20px;
+            margin: 20px auto;
+            display: block;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #compare-button:hover {
+            background-color: #218838;
+        }
+        #comparison-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .crypto-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .crypto-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .crypto-card:hover {
+            transform: scale(1.05);
+        }
+        .crypto-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .crypto-name img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .price-up {
+            color: green;
+        }
+        .price-down {
+            color: red;
+        }
+        .price-details {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .show-button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .show-button:hover {
+            background-color: #0056b3;
+        }
+        .compare-checkbox {
+            margin-top: 10px;
+        }
+
+        /* New section: Grid layout for all cryptocurrencies and their prices */
+        #all-cryptos-section {
+            margin-top: 50px;
+        }
+        .crypto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .crypto-grid .crypto-card {
+            display: block;
+            text-align: center;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .crypto-grid h3 {
+            margin-top: 10px;
         }
     
 
@@ -232,7 +391,7 @@ display:none;
 width:90%;
 display:flex;
 justify-content:space-around;
-flex-wrap:nowrap;
+
 align-content:center;
 gap:2.5rem;
 }
