@@ -333,12 +333,19 @@ Individual investors, business or corporate clients, organizations, and groups b
 <div>
 <p class="ex"> Cryotocurrencies and thier Prices</p>
 <div class="major-space"></div>
+    <input type="text" id="search" placeholder="Search for a cryptocurrency...">
+    <button id="compare-button" onclick="compareSelected()">Compare Selected</button>
+    <div id="comparison-container"></div>
+    <div class="crypto-container" id="crypto-container"></div>
+
     <!-- New Section to Display All Cryptos with Prices -->
     <div id="all-cryptos-section">
+        <h2>All Cryptocurrencies with Prices</h2>
         <div class="crypto-grid" id="crypto-grid">
             <!-- Cryptocurrency grid items will be inserted here -->
         </div>
     </div>
+
 </div>
 </div>
 </div>
