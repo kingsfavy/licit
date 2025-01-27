@@ -66,7 +66,7 @@ const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets';
                 const priceChangeClass = crypto.price_change_percentage_24h >= 0 ? 'price-up' : 'price-down';
                 const card = document.createElement('div');
                 card.className = 'crypto-card';
-                card.innerHTML = `
+                card.innerHTML = `<div>
                     <div class="crypto-name">
                         <img src="${crypto.image}" alt="${crypto.name} logo">
                         <h2>${crypto.name} (${crypto.symbol.toUpperCase()})</h2>
@@ -86,6 +86,7 @@ const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets';
                         <p class="${priceChangeClass}"><strong>24h Change: ${crypto.price_change_percentage_24h.toFixed(2)}%</strong></p>
                         <p><strong>Volume: ${crypto.total_volume.toLocaleString()}</strong></p>
                         <p><strong>Supply: ${crypto.circulating_supply ? crypto.circulating_supply.toLocaleString() : 'N/A'}</strong></p>
+                    </div>
                     </div>
                 `;
                 container.appendChild(card);
