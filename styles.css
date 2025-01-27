@@ -303,16 +303,12 @@ height:200px;
         #comparison-container {
             margin-top: 30px;
             text-align: center;
-            width:100%;
-            
         }
         .crypto-container {
             display: flex;
-            width:100%;
+            flex-wrap: wrap;
             gap: 20px;
-            flex-wrap:wrap;
             justify-content: center;
-            align-content:center;
         }
         .crypto-card {
             background: #fff;
