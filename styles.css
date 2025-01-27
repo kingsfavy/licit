@@ -296,6 +296,9 @@ height:200px;
             border-radius: 5px;
             font-size: 16px;
         }
+    #compare-button{
+        margin-left:10%;
+    }
 
      #compare-button:hover {
             background-color: #218838;
@@ -307,14 +310,18 @@ height:200px;
         .crypto-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            gap: 1rem;
+            flex-wrap:wrap;
+            justify-content: space-around;
+            width:100%;
         }
         .crypto-card {
             padding: 20px;
             width: 300px;
             transition: transform 0.3s;
             margin:1rem 0;
+            border-radius:8px;
+            border:1px;
         }
         .crypto-card:hover {
             transform: scale(1.05);
