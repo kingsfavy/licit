@@ -302,10 +302,7 @@ height:200px;
         }
 
         #comparison-container {
-         width:100%;
-        display:flex;
-        justify-content:center;
-        align-content:center;
+         text-align:center;
         gap:20px;
         }
         .crypto-container {
