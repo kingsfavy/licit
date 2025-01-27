@@ -66,11 +66,11 @@ const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets';
                 const priceChangeClass = crypto.price_change_percentage_24h >= 0 ? 'price-up' : 'price-down';
                 const card = document.createElement('div');
                 card.className = 'crypto-card';
-                card.innerHTML = `                    <div class="crypto-name">
+                card.innerHTML = `<div class="crypto-name">
                         <img src="${crypto.image}" alt="${crypto.name} logo">
                         <h2>${crypto.name} (${crypto.symbol.toUpperCase()})</h2>
                     </div>
-                    <button class="show-button" onclick="togglePrices('${crypto.id}')">Show Prices</button>
+                    <button class="show-button" onclick="togglePrices('${crypto.id}')">Details</button>
                     <input type="checkbox" class="compare-checkbox" value="${crypto.id}" onchange="toggleSelection('${crypto.id}')"> Compare
                     <div id="${crypto.id}" class="price-details">
                         <p><strong>USD: $${crypto.current_price.toLocaleString()}</strong></p>
