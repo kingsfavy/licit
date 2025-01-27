@@ -300,15 +300,17 @@ height:200px;
         #compare-button:hover {
             background-color: #218838;
         }
+
         #comparison-container {
          width:100%;
         display:flex;
-        justify-content:flex-start;
+        justify-content:center;
         align-content:center;
         gap:20px;
         }
         .crypto-container {
             display: flex;
+            width:100%;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
