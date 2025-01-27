@@ -303,10 +303,12 @@ height:200px;
         #comparison-container {
             margin-top: 30px;
             text-align: center;
+            width:100%;
+            
         }
         .crypto-container {
             display: flex;
-            width:90%;
+            width:100%;
             gap: 20px;
             justify-content: center;
             align-content:center;
