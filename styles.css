@@ -34,6 +34,8 @@ font-weight:400;
 .float{
 text-align:right;
 }
+
+
 .body-text{
 text-align:center;
 width:90%;
@@ -46,6 +48,12 @@ font-weight:100;
 .main-container{
 width:100%;
 }
+
+
+.success{
+color:#fff;
+}
+
 
 .inner-container{
 width:90%;
@@ -60,7 +68,7 @@ font-family:arial;
 }
 
 .top-section p{
-color:#fff;
+color:#000;
 }
 
 .infos{
@@ -79,13 +87,14 @@ color:#4D22B2;
 
 
 .about-section{
-padding:2rem 0;
 width:100%;
+padding:2rem 0;
 position:relative;
 height:auto;
-display:flex;
-justify-content:center;
-align-content:center;
+}
+
+.about-section p{
+font-weight:400;
 }
 
 
@@ -118,7 +127,7 @@ font-weight:500;
 font-family:arial;
 }
 
-.btn{
+.btn, .show-button{
 width:45%;
 padding:18px;
 font-size:18px;
@@ -187,6 +196,10 @@ border-radius:20px;
 height:2rem;
 }
 
+img{
+filter:saturate(1.5);
+}
+
 /*.title{
 font-weight:500;
 font-size:40px;
@@ -225,7 +238,7 @@ font-weight:bolder;
 }
 
 .white-space{
-height:8rem;
+height:4rem;
 }
 
 .minor-space{
@@ -255,6 +268,12 @@ widrh:100%;
 height:auto;
 padding:1.5rem 0;
 background:#4d22b2;
+}
+
+
+.center-img-con{
+width:90%;
+height:200px;
 }
 
         .content {
@@ -289,32 +308,40 @@ background:#4d22b2;
             border-radius: 5px;
             cursor: pointer;
         }
+
+
         #compare-button:hover {
             background-color: #218838;
         }
+
+
         #comparison-container {
             margin-top: 30px;
             text-align: center;
         }
+
+
         .crypto-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
         }
+
+
         .crypto-card {
-            background: #fff;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
+            padding: 1.5rem 0;
+            width:300px;
             transition: transform 0.3s;
         }
+
+
         .crypto-card:hover {
             transform: scale(1.05);
         }
+
+
         .crypto-name {
             display: flex;
             align-items: center;
@@ -337,15 +364,8 @@ background:#4d22b2;
             margin-top: 10px;
             text-align: left;
         }
-        .show-button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+
+
         .show-button:hover {
             background-color: #0056b3;
         }
@@ -358,11 +378,14 @@ background:#4d22b2;
             margin-top: 50px;
         }
         .crypto-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            margin-top: 20px;
+            display: flex;
+             width:90%;
+             justify-content:space-around;
+             align-content:center;
+              gap: 2rem;
+              padding: 2rem 0,
+            /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            margin-top: 20px;*/
         }
         .crypto-grid .crypto-card {
             display: block;
@@ -386,6 +409,11 @@ display:block;
 
 .mobile{
 display:none;
+}
+
+.desk{
+width:45%;
+height:auto;
 }
 
 .infos{
