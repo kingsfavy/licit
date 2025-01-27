@@ -319,6 +319,7 @@ height:200px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s;
+            margin:1rem 0;
         }
         .crypto-card:hover {
             transform: scale(1.05);
