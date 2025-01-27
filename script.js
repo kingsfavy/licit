@@ -77,7 +77,7 @@ const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets';
                         <p><strong>NGN: ₦${(crypto.current_price * currencies.ngn).toLocaleString()}</strong></p>
                         <p><strong>GBP: £${(crypto.current_price * currencies.gbp).toLocaleString()}</strong></p>
                         <p><strong>EUR: €${(crypto.current_price * currencies.eur).toLocaleString()}</strong></p>
-                        <p></strong>JPY: ¥${(crypto.current_price * currencies.jpy).toLocaleString()}</strong></p>
+                        <p><strong>JPY: ¥${(crypto.current_price * currencies.jpy).toLocaleString()}</strong></p>
                         <p><strong>AUD: A$${(crypto.current_price * currencies.aud).toLocaleString()}</strong></p>  <!-- Added AUD price -->
                         <p><strong>Market Cap: $${crypto.market_cap.toLocaleString()}</strong></p>
                         <p class="${priceChangeClass}"><strong>24h Change: ${crypto.price_change_percentage_24h.toFixed(2)}%</strong></p>
