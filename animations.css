@@ -9,7 +9,7 @@
 }
 
 .active.fade-left {
-  animation: fade-left 1s 1s ease-in both;
+  animation: fade-left 1s 0s ease-in both;
 }
 
 .active.fade-right {
