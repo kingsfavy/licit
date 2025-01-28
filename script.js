@@ -73,16 +73,16 @@ const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets';
                     <button class="show-button" onclick="togglePrices('${crypto.id}')">Details</button>
                     <input type="checkbox" class="compare-checkbox" value="${crypto.id}" onchange="toggleSelection('${crypto.id}')"> Compare
                     <div id="${crypto.id}" class="price-details">
-                        <p><strong>USD: $${crypto.current_price.toLocaleString()}</strong></p>
-                        <p><strong>NGN: ₦${(crypto.current_price * currencies.ngn).toLocaleString()}</strong></p>
-                        <p><strong>GBP: £${(crypto.current_price * currencies.gbp).toLocaleString()}</strong></p>
-                        <p><strong>EUR: €${(crypto.current_price * currencies.eur).toLocaleString()}</strong></p>
-                        <p><strong>JPY: ¥${(crypto.current_price * currencies.jpy).toLocaleString()}</strong></p>
-                        <p><strong>AUD: A$${(crypto.current_price * currencies.aud).toLocaleString()}</strong></p>  <!-- Added AUD price -->
-                        <p><strong>Market Cap: $${crypto.market_cap.toLocaleString()}</strong></p>
-                        <p class="${priceChangeClass}"><strong>24h Change: ${crypto.price_change_percentage_24h.toFixed(2)}%</strong></p>
-                        <p><strong>Volume: ${crypto.total_volume.toLocaleString()}</strong></p>
-                        <p><strong>Supply: ${crypto.circulating_supply ? crypto.circulating_supply.toLocaleString() : 'N/A'}</strong></p>
+                        <p>USD: $${crypto.current_price.toLocaleString()}</p>
+                        <p>NGN: ₦${(crypto.current_price * currencies.ngn).toLocaleString()}</p>
+                        <p>GBP: £${(crypto.current_price * currencies.gbp).toLocaleString()}</p>
+                        <p>EUR: €${(crypto.current_price * currencies.eur).toLocaleString()}</p>
+                        <p>JPY: ¥${(crypto.current_price * currencies.jpy).toLocaleString()}</p>
+                        <p>AUD: A$${(crypto.current_price * currencies.aud).toLocaleString()}</p>  <!-- Added AUD price -->
+                        <p>Market Cap: $${crypto.market_cap.toLocaleString()}</strong></p>
+                        <p class="${priceChangeClass}"><strong>24h Change: ${crypto.price_change_percentage_24h.toFixed(2)}%</p>
+                        <p>Volume: ${crypto.total_volume.toLocaleString()}</strong></p>
+                        <p>Supply: ${crypto.circulating_supply ? crypto.circulating_supply.toLocaleString() : 'N/A'}</p>
                     </div>
                 `;
                 container.appendChild(card);
