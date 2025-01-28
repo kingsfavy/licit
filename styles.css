@@ -313,12 +313,25 @@ width:40px;
 height:40px;
 }
 
-.contacts-icon{
+
+.contacts-con{
 display:flex;
-justify-content:center;
-width:30%;
+justify-content:space-evenly;
+width:70%;
+align-content:
+center;
+gap:1rem; 
 height:auto;
-align-content:center;
+color:black;
+}
+
+.contacts-con p{
+background:#ebebeb;
+border-radius:20px;
+padding:10px;
+width:auto;
+height:auto;
+text-align:center;
 }
 
 
