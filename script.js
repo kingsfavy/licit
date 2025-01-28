@@ -67,7 +67,7 @@ async function displayCryptos() {
                 <img src="${crypto.image}" alt="${crypto.name} logo">
                 <h2>${crypto.name} (${crypto.symbol.toUpperCase()})</h2>
             </div>
-            <button class="show-button" onclick="togglePrices('${crypto.id}')">Show Prices</button>
+            <button class="show-button" onclick="togglePrices('${crypto.id}')">Details</button>
             <input type="checkbox" class="compare-checkbox" value="${crypto.id}" onchange="toggleSelection('${crypto.id}')"> Compare
             <div id="${crypto.id}" class="price-details">
                 <p>USD: $${crypto.current_price.toLocaleString()}</p>
