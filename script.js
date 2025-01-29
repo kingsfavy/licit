@@ -77,3 +77,9 @@ async function displayCryptos() {
 setInterval(displayCryptos, 3600000);
 
 document.addEventListener('DOMContentLoaded', displayCryptos);
+
+const year= new Date().getFullYear();
+
+document.getElementById("year").innerHTML=year;
+
+
