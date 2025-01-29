@@ -476,6 +476,14 @@ height:auto;
         }
 
 
+         .crypto-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+         }
+
+
         .crypto-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
