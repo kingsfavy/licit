@@ -391,6 +391,10 @@ color:black;
   border-color: transparent #ebebeb transparent transparent;
 }
 
+
+
+
+
 .site-map-con{
 background:#000;
 color:#fff;
@@ -646,5 +650,21 @@ border-radius:5px;
 
 .center-img-con .imgs{
 border-radius:10px;
+}
+
+.icon-con{
+width:60px;
+height:60px;
+}
+}
+
+
+@media (max-width:768px){
+.desktop{
+display:none;
+}
+
+.mobile{
+display:block;
 }
 }
