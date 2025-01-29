@@ -84,7 +84,7 @@ async function displayCryptos() {
         container.appendChild(card);
 
         // Populate the grid with all cryptos and their prices
-        const gridCard = document.createElement('div');
+     /*   const gridCard = document.createElement('div');
         gridCard.className = 'crypto-card';
         gridCard.innerHTML = `
             <h3>${crypto.name} (${crypto.symbol.toUpperCase()})</h3>
@@ -96,7 +96,7 @@ async function displayCryptos() {
         `;
         allCryptoGrid.appendChild(gridCard);
     });
-}
+}*/
 
 function togglePrices(id) {
     const priceDiv = document.getElementById(id);
