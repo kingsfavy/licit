@@ -19,68 +19,61 @@ window.addEventListener("scroll", reveal);
 
 // Smooth scrolling
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-
 const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets';
-        const currencies = {
-            usd: 1,
-            gbp: 0.78,
-            eur: 0.92,
-            jpy: 148,
-            aud: 1.5
-        };
+const currencies = {
+    usd: 1,
+    gbp: 0.78,
+    eur: 0.92,
+    jpy: 148,
+    aud: 1.5
+};
 
-        // Fetch market data for BTC, ETH, and USDT
-        async function fetchCryptoData() {
-            try {
-                const response = await fetch(`${apiUrl}?vs_currency=usd&ids=bitcoin,ethereum,tether&order=market_cap_desc&sparkline=false`);
-                if (!response.ok) throw new Error('Failed to fetch data');
-                return await response.json();
-            } catch (error) {
-                console.error("Error fetching cryptocurrency data:", error);
-                return [];
-            }
-        }
+let allCryptos = [];
 
-        // Display updated crypto prices and market data
-        async function displayCryptos() {
-            const container = document.getElementById('crypto-container');
-            container.innerHTML = '';
+// Fetch data for BTC, ETH, and Tether
+async function fetchCryptoData() {
+    const response = await fetch(`${apiUrl}?vs_currency=usd&ids=bitcoin,ethereum,tether&order=market_cap_desc&sparkline=false`);
+    return response.json();
+}
 
-            const cryptos = await fetchCryptoData();
-            if (cryptos.length === 0) return;
+async function displayCryptos() {
+    const container = document.getElementById('crypto-container');
 
-            cryptos.forEach(crypto => {
-                const card = document.createElement('div');
-                card.className = 'crypto-card';
-                card.innerHTML = `
-                    <div class="crypto-name">
-                        <img src="${crypto.image}" alt="${crypto.name} logo">
-                        <h2>${crypto.name} (${crypto.symbol.toUpperCase()})</h2>
-                    </div>
-                    <p>USD: $${crypto.current_price.toLocaleString()}</p>
-                    <p>GBP: £${(crypto.current_price * currencies.gbp).toLocaleString()}</p>
-                    <p>EUR: €${(crypto.current_price * currencies.eur).toLocaleString()}</p>
-                    <p>JPY: ¥${(crypto.current_price * currencies.jpy).toLocaleString()}</p>
-                    <p>AUD: A$${(crypto.current_price * currencies.aud).toLocaleString()}</p>
-                    <p>Market Cap: $${crypto.market_cap.toLocaleString()}</p>
-                    <p>Volume: ${crypto.total_volume.toLocaleString()}</p>
-                    <p>Supply: ${crypto.circulating_supply ? crypto.circulating_supply.toLocaleString() : 'N/A'}</p>
-                `;
-                container.appendChild(card);
-            });
-        }
+    // Fetch data for selected cryptocurrencies
+    const cryptos = await fetchCryptoData();
+    allCryptos = cryptos;
 
-        // Update every hour (3600000 ms = 1 hour)
-        setInterval(displayCryptos, 3600000);
+    container.innerHTML = '';
 
-        document.addEventListener('DOMContentLoaded', displayCryptos);
+    allCryptos.forEach(crypto => {
+        const priceChange = crypto.price_change_percentage_24h.toFixed(2);
+        const priceChangeClass = priceChange >= 0 ? 'price-up' : 'price-down';
+        const arrow = priceChange >= 0 ? '▲' : '▼';
+
+        const card = document.createElement('div');
+        card.className = 'crypto-card';
+        card.innerHTML = `
+            <div class="crypto-name">
+                <img src="${crypto.image}" alt="${crypto.name} logo">
+                <h2>${crypto.name} (${crypto.symbol.toUpperCase()})</h2>
+            </div>
+            <div class="crypto-details">
+                <p>USD: $${crypto.current_price.toLocaleString()}</p>
+                <p>GBP: £${(crypto.current_price * currencies.gbp).toLocaleString()}</p>
+                <p>EUR: €${(crypto.current_price * currencies.eur).toLocaleString()}</p>
+                <p>JPY: ¥${(crypto.current_price * currencies.jpy).toLocaleString()}</p>
+                <p>AUD: A$${(crypto.current_price * currencies.aud).toLocaleString()}</p>
+                <p>Market Cap: $${crypto.market_cap.toLocaleString()}</p>
+                <p>Volume: ${crypto.total_volume.toLocaleString()}</p>
+                <p>Supply: ${crypto.circulating_supply ? crypto.circulating_supply.toLocaleString() : 'N/A'}</p>
+                <p class="${priceChangeClass}">24h Change: ${priceChange}% ${arrow}</p>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// Update every hour (3600000 ms = 1 hour)
+setInterval(displayCryptos, 3600000);
+
+document.addEventListener('DOMContentLoaded', displayCryptos);
