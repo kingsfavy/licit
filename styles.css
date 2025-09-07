@@ -30,7 +30,6 @@ p, h3, h1{
 #page{
    width:100%;
    height:auto;
-   display:none;
 }
 
 .main-container, .inner-container, .con{
@@ -729,4 +728,14 @@ display:block;
    width:100%;
    height:auto;
 }
+   #page{
+      display:none;
+   }
 }
+
+@media (min-width:768px){
+#page{
+   display:none;
+}
+}
+
