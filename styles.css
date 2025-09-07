@@ -164,6 +164,10 @@ color:#fff;
 height:auto;
 }
 
+.btn, .btn2{
+   border-radius:5px;
+}
+
 .btn2{
 width:45%;
 padding:18px;
