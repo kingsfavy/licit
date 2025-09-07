@@ -725,4 +725,8 @@ display:none;
 .mobile{
 display:block;
 }
+   #landing{
+   width:100%;
+   height:auto;
+}
 }
