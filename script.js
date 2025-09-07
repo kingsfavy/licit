@@ -83,3 +83,6 @@ const year= new Date().getFullYear();
 document.getElementById("year").innerHTML=year;
 
 
+function page(){
+  document.getElementById("page").style.display="block";
+}
