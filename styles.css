@@ -173,10 +173,35 @@ width:45%;
 padding:18px;
 font-size:18px;
 background:none;
-border:2px solid #4d22b2;
+border:none;
+z-index:0;
+position:relative;
+/*border:2px solid #4d22b2;*/
 color:#4d22b2;
 height:auto;
 }
+
+  .btn2::before {
+      content: "";
+      position: absolute;
+     padding:18px;
+      inset: 0;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #4d22b2, #ffffff, #4d22b2);
+      background-size: 500% 500%;
+      animation: moveBorder  4s linear infinite;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      z-index: -1;
+    }
+
+    @keyframes moveBorder {
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
 
 .txt{
 word-spacing:1px;
