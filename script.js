@@ -85,4 +85,5 @@ document.getElementById("year").innerHTML=year;
 
 function page(){
   document.getElementById("page").style.display="block";
+    document.getElementById("page-btn").style.display="none";
 }
