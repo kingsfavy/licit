@@ -735,10 +735,10 @@ img{
 
 @keyframes slide{
    0%{
-      transform:translateX(0px);
+      transform:translateY(0px);
    }
    100%{
-      transform:translateX(5px);
+      transform:translateY(15px);
    }
 }
 @media (max-width:768px){
