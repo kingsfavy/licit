@@ -13,14 +13,13 @@ color:#000;
 }
 .hacks{
    display:flex;
+   flex-wrap:wrap;
    justify-content:space-evenly;
-   width:95%;
+   width:90%;
    gap:1rem;
+     color:#4d22b2;
 }
-.hacks p{
-   color:#4d22b2;
-   font-size:1.5em;
-}
+
 p, h3, h1{
    word-spacing:3px;
 }
