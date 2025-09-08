@@ -718,19 +718,19 @@ img{
    object-fit:cover;
 }
 #one{
-   animation:slide ease-in 1 1s 1s both;
+   animation:slide alternate ease-in 1 1s 1s both;
 }
 #two{
-   animation:slide ease-in 1 1s 2s both;
+   animation:slide alternate ease-in 1 1s 2s both;
 }
 #three{
-   animation:slide ease-in 1 1s 3s both;
+   animation:slide alternate ease-in 1 1s 3s both;
 }
 #four{
-   animation:slide ease-in 1 1s 4s both;
+   animation:slide alternate ease-in 1 1s 4s both;
 }
 #five{
-   animation:slide ease-in 1 1s 5s both;
+   animation:slide alternate ease-in 1 1s 5s both;
 }
 
 @keyframes slide{
