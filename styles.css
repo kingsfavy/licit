@@ -745,9 +745,6 @@ display:block;
 .mobile{
 display:none;
 }
-   .btn, .btn2{
-      width:auto;
-   }
    #page-btn{
       display:block;
    }
