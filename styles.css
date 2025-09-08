@@ -737,7 +737,7 @@ img{
    0%{
       transform:translateX(-5px);
       display:none;
-       color:#ffffff;
+       color:#4d22b2;
    }
    100%{
       transform:translateX(15px);
