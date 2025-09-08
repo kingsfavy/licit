@@ -735,12 +735,12 @@ img{
 
 @keyframes slide{
    0%{
-      transform:translateY(-5px);
+      transform:translateX(-5px);
       display:none;
        color:#ffffff;
    }
    100%{
-      transform:translateY(15px);
+      transform:translateX(15px);
       display:block;
        color:#4d22b2;
    }
