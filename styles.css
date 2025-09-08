@@ -742,5 +742,12 @@ display:block;
 #page{
    display:none;
 }
+   .desktop{
+display:block;
+}
+
+.mobile{
+display:none;
+}
 }
 
