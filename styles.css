@@ -15,7 +15,10 @@ color:#000;
    display:flex;
    justify-content:space-evenly;
    width:90%;
-   gap:2rem;
+   gap:1rem;
+}
+.hacks p{
+   color:#4d22b2;
 }
 p, h3, h1{
    word-spacing:3px;
