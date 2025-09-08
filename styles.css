@@ -14,11 +14,12 @@ color:#000;
 .hacks{
    display:flex;
    justify-content:space-evenly;
-   width:90%;
+   width:95%;
    gap:1rem;
 }
 .hacks p{
    color:#4d22b2;
+   font-size:1.5em;
 }
 p, h3, h1{
    word-spacing:3px;
