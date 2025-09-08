@@ -737,10 +737,12 @@ img{
    0%{
       transform:translateY(-5px);
       display:none;
+       color:#ffffff;
    }
    100%{
       transform:translateY(15px);
       display:block;
+       color:#4d22b2;
    }
 }
 @media (max-width:768px){
